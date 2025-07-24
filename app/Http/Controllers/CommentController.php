@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CommentRequest;
 use App\Models\Recipe;
 use App\Repositories\CommentRepository;
+use Illuminate\Http\JsonResponse;
 
 class CommentController extends Controller
 {
@@ -16,7 +17,12 @@ class CommentController extends Controller
         
     }
 
-    public function store(CommentRequest $request, Recipe $recipe)
+    /**
+     * @param  CommentRequest  $request
+     * @param  Recipe  $recipe
+     * @return JsonResponse
+     */
+    public function store(CommentRequest $request, Recipe $recipe): JsonResponse
     {
         $data = $request->only([
             'author',
