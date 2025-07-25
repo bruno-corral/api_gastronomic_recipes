@@ -13,10 +13,7 @@ class RecipeController extends Controller
     /**
      * @param RecipeRepository $recipeRepository
      */
-    public function __construct(public RecipeRepository $recipeRepository)
-    {
-        
-    }
+    public function __construct(public RecipeRepository $recipeRepository) {}
 
     /**
      * @return JsonResponse
@@ -67,7 +64,7 @@ class RecipeController extends Controller
 
         return response()->json([
             'message' => 'Recipe created successfully.',
-            'recipe'    => [
+            'recipe' => [
                 'id' => $recipe->id,
                 'title' => $recipe->title,
                 'description' => $recipe->description,
@@ -97,7 +94,7 @@ class RecipeController extends Controller
 
         return response()->json([
             'message' => 'Recipe created successfully.',
-            'recipe'    => [
+            'recipe' => [
                 'id' => $recipe->id,
                 'title' => $recipe->title,
                 'description' => $recipe->description,
@@ -128,7 +125,7 @@ class RecipeController extends Controller
 
         return response()->json([
             'message' => 'Recipe updated successfully.',
-            'recipe'    => [
+            'recipe' => [
                 'id' => $recipe->id,
                 'title' => $recipe->title,
                 'description' => $recipe->description,

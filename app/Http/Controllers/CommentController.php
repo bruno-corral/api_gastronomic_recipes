@@ -12,10 +12,7 @@ class CommentController extends Controller
     /**
      * @param CommentRepository $commentRepository
      */
-    public function __construct(public CommentRepository $commentRepository)
-    {
-        
-    }
+    public function __construct(public CommentRepository $commentRepository) {}
 
     /**
      * @param  CommentRequest  $request
