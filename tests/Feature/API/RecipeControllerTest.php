@@ -175,7 +175,7 @@ class RecipeControllerTest extends TestCase
             ]);
     }
 
-    public function test_get_comment_recipe(): void
+    public function test_post_comment_recipe(): void
     {
         $user = User::factory()->create();
 

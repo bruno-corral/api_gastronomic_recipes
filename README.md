@@ -134,6 +134,27 @@ Exemplo de JSON no Body para criação:
 
 ---
 
+## Testes automatizados
+
+- Abordagem escolhida: **Testes de integração**.
+- Motivo de ter escolhido: Fluxos completos de CRUD, garantindo a validação entre controllers, repositories, banco de dados e respostas da API.
+- Ferramenta: PHPUnit.
+- Como rodar os testes:
+```bash
+php artisan test
+```
+
+### Testes cobrem:
+- Registro de usuário com sucesso.
+- Login de usuário com sucesso.
+- Validação de usuário cadastrado com sucesso.
+- Listagem de receitas de usuário autenticado.
+- Listagem de uma receita de usuário autenticado.
+- Registro de uma receita de usuário autenticado.
+- Atualização de uma receita de usuário autenticado.
+- Exclusão de uma receita de usuário autenticado.
+- Criação de um comentário de uma receita de usuário autenticado.
+
 ## Requisitos atendidos (conforme orientado na descrição do projeto)
 - ✅ A API deve conter um sistema de autenticação completo (login, logoff e register)
 - ✅ Após logado o usuário deve poder cadastrar novas receitas além de visualizar, editar ou excluir receitas já existentes
