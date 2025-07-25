@@ -63,7 +63,7 @@ class RecipeController extends Controller
         $recipe = $this->recipeRepository->show($recipe);
 
         return response()->json([
-            'message' => 'Recipe created successfully.',
+            'message' => 'Recipe found successfully.',
             'recipe' => [
                 'id' => $recipe->id,
                 'title' => $recipe->title,
